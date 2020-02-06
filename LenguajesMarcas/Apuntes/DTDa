@@ -1,0 +1,72 @@
+Sin errores sintácticos y bien escrito -> Bien formado -cumple las reglas del DTD> XML ES VÁLIDO
+
+DTD externa
+	privada:<!DOCTYPE elemento-raíz SYSTEM "URI"> // SYSTEM indica que trabaja en nuestro equipo
+	pública:<!DOCTYPE elemento-raíz SYSTEM "marcadores.dtd">
+	<marcadores>
+		<pagina>
+			<nombre>Abrirllave</nombre>
+Estructura
+	elementos: <!ELEMENT animales (#PCDATA)> <!-- texto-->
+		elementos hijos: <!ELEMENT animales (nombre_cientifico, dieta, habitat)>
+						<!ELEMENT nombre_cientifico (#PCDATA)>
+						<!ELEMENT dieta (#PCDATA)>
+						<!ELEMENT habitat (#PCDATA)>
+
+Atributos especiales
+	-xml:lang
+	-xml:space Determina como tratar los espacios en blanco, tabulaciones
+		preserve-> Almacena los espacios en blanco y las tabulaciones. Ej F1.
+Declaración de entidades
+	Para XML y DTD
+		-Internas analizables (parsed) <!--parsed=interpretado-->
+		-Externas analizables (parsed)
+		-Externas no analizables (unparsed)
+	DTD
+		Internas analizables (parsed)
+		Externas analizables (parsed)
+
+	Entidad General externas analizables
+		privadas:
+			<!ENTITY nombre-de-la-entidad SYSTEM "URI">
+		publicas:
+			<!DOCTYPE nombre-de-la-entidad PUBLIC SYSTEM "identificador-publico" "URI">
+	Entidad General externas no analizables
+		privadas:
+			<!ENTITY nombre-de-la-entidad SYSTEM "logo.txt">
+		publicas:
+			<!DOCTYPE nombre-de-la-entidad PUBLIC SYSTEM ...........">
+	Entidad paramétricas externas analizables
+		privadas:
+			<!ENTITY nombre-de-la-entidad SYSTEM "URI" %nombre-de-la-entidad> // Un - al principio de una URI significa que no está registrada y + que si está registrada.
+		publicas:
+			<...................................................
+Declaración de notaciones. Sirven para explicar que es lo que se encuentra en la URI
+	Privada:
+		<!NOTATION nombre-de-la-entidad SYSTEM "URI" NDATA> // El uri podrá ser un fichero
+	Publicas:
+		<!NOTATION nombre-de-la-entidad PUBLIC "URI" NDATA>
+
+Secciones condicionales
+	Ignore:
+		<! IGNORE []> <!-- los parámetros se indican precedidos de '%'-->
+	Include:
+		<! INCLUDE []>
+
+Entidad dentro de otra
+
+	&nombre-entidad
+
+Referencia circular o reflexiva a entidades
+
+	Es un error
+
+Atributos con valor = Nombre de una Notación 
+	Se utiliza para las versiones de software
+
+Espacio de nombres
+	nombre-del-elemento prefijo elemento(URI)
+		<!ELEMENT prefijo atributo #FIXED URI>
+		elmento
+		elemento
+		Especifica que elemento

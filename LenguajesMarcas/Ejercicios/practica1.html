@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>El Corte Perfecto</title>
+  </head>
+  <body>
+    <h1>INSCRIPCIÓN DE CLIENTES</h1>
+
+    <table border="1" style="width:600px" style="hight:600px">
+
+      <tr>
+        <td rowspan="2">TIPO DE INDUSTRIA</td>
+        <td colspan="3">ORDEN POR FACTURACIÓN EN</td>
+      </tr>
+      <tr>
+          <td>ESPAÑA</td>
+          <td>EUROPA</td>
+          <td>AMÉRICA</td>
+      </tr>
+      <tr>
+          <td>Textil</td>
+          <td>1</td>
+          <td>3</td>
+          <td>5</td>
+      </tr>
+    </table>
+
+    <form action="#" method="encrypte">
+      <fieldset>
+        <legend>Datos personales</legend>
+        Nombre <input type="text"placeholder="Escriba su nombre" autofocus><br>
+        Apellidos <input type="text" placeholder="Aquí los apellidos"><br>
+        Continente <input type="text" placeholder="Europa o América" pattern="[a-zA-é]{6,7}"><br>
+        País <input type="text" placeholder="Introduzca el país"><br>
+        Ciudad <input type="text" placeholder="Introduzca su ciudad"><br>
+        Email <input type="email" placeholder="El correo electrónico">
+      </fieldset>
+      <fieldset>
+        <legend>Gustos Textiles y Envío</legend>
+        Preferencia de Ropa:
+        Masculina <input type="radio" value="Masculina">
+        Femenina <input type="radio"  value="Femenina">
+        Unisex <input type="radio" value="Unisex"> <br>
+        Tallas usadas en el hogar:
+        XS <input type="checkbox" value="XS">
+        S <input type="checkbox" value="S">
+        M <input type="checkbox" value="M">
+        L <input type="checkbox" value="L">
+        XL <input type="checkbox" value="XL">
+        XXL <input type="checkbox"value="XXL">
+        XXXL <input type="checkbox"value="XXXL"> <br>
+        Prendas preferidas: <br>
+        <input type="text"  id="PrendasPreferidas" list="prendas"/>
+        <datalist id="PrendasPreferidas">
+          <option value="Pantalones" list="prendas"/>
+          <option value="Faldas" list="prendas"/>
+          <option value="Blusas" list="prendas"/>
+          <option value="Cazadoras" list="prendas" />
+          <option value="Abrigos" list="prendas"/>
+        </datalist> <br>
+        Envio
+        <select>
+          <optgroup label="Recogida en Mano">
+              <option value="En tienda">En tienda</option>
+              <option value="En Oficina de Correos">Oficina de Correros</option>
+          </optgroup>
+          <optgroup label="Envío a Domicilio">
+                <option value="Por avión">Por avión</option>
+                <option value="Por barco">Por barco</option>
+                <option value="Por tren">Por tren</option>
+                <option value="Por camión">Por camión</option>
+          </optgroup>
+        </select>
+        </fieldset>
+        <fieldset>
+          <legend>Observaciones</legend>
+            <textarea name="name" rows="30" cols="90"> </textarea>
+        </fieldset>
+<input type="reset"  value="Borrar los datos del formulario">
+        <input type="submit" value="Enviar datos a central">
+    </form>
+  </body>
+</html>

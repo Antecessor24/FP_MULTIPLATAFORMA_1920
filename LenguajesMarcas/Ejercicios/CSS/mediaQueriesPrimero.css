@@ -1,0 +1,44 @@
+/* Importar otro .css y recciclar codigo con la condición de que la pantalla tengo una altura de 200 px y anchura de 900px*/
+@import url("otraCSS.css") screen and (min-width:200px) and (max-width:900px);
+/*body
+{
+	background-color: grey;
+}
+*/
+/*Si cumple la condicion de anchura de pantalla el body cambia a color rojo*/
+@media screen and (max-width: 960px)
+{
+	body
+	{
+		background-color: red;
+	}
+}
+/*Si cumple la condicion de anchura de pantalla el body cambia a color naranja*/
+@media screen and (max-width: 768px)
+{
+	body
+	{
+		background-color: orange;
+	}
+}
+/*Si cumple la condicion de anchura de pantalla el body cambia a color amarillo*/
+@media screen and (max-width: 550px)
+{
+	body
+	{
+		background-color: yellow;
+	}
+}
+/*Si cumple la condicion de anchura de pantalla el body cambia a color verde*/
+@media screen and (max-width: 320px)
+{
+	body
+	{
+		background-color: green;
+	}
+}
+/*Si cumple la condicion de anchura de pantalla maxima el body cambia al color en hexadecimal*/
+@media screen and (max-device-width: 1920px)
+{
+	h1 { color: #2ff}
+}

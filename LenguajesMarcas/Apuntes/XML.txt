@@ -1,0 +1,117 @@
+/->Nodo documento: Contiene todo
+
+<Nombre> ->Nodo raíz o elemento raíz
+
+/                            
+|           
+elemento raíz
+	|
+	|_nombre
+	|
+	|_
+	|
+	|_fechaNaci
+		|
+		|_día
+		|_mes
+		|_año
+
+Sintaxis
+
+Elementos CaseSensitive. Nombres en minúsculas y espaciar con el _
+
+<Bicicleta/> = <Bicicleta></Bicicleta>
+
+No utilizar puntos en el nombre del elemento
+
+Cada atributo en un elemento debe ser único
+
+<?xml versión="1.0" encoding="UTF-8"?> //La ultima interrogación es una instrucción de procesamiento
+
+standalone="yes" -> Atributo que significa que el documento es independiente de otros como schemas
+
+Ejemplo para asociar un archivo CSS a un documento XML:
+<?xml-stylessheet type="text/css" href="estilo-animales.css"?>
+
+Carácter Entidad Referencia a entidad
+<	lt		&lt;
+>	gt		&gt;
+"	qout		&qout;
+'	apos		&apos;
+&	amp		&amp;
+
+Se recomineda &lt; en vez de <
+Usar &amp; en vez de &
+
+Entre comillas dobles no se puede utilizar las comillas doble:<dato carácter=“mis comillas (“)”/>
+Hay que poner <dato carácter=“mis comillas (&quot;)”/>Lo mismo ocurre con las comillas simples, sustituyendo &quot; por &apos;
+
+Si se puede poner comillas simples entre dobles o dobles entre simples:<dato carácter=“mis comillas (‘)”/> o <dato carácter=‘mis comillas (“)’/> 
+
+Se pueden escribir referecias de caracteres UNICODE con los símbolos &#, seguidos de del valor decimal o hexadecimal del carácter UNICODE que se quiera representar y añadiendo un ; al final
+
+Para incluir comentarios: <! --Mis comentarios -->
+
+Para escribir texto que no se desea que sea analizado. No se pueden anidar CDATA ni incluir los caracteres ]]>
+
+<![CDATA["texto a incluir"]]>
+
+Espacios de nombres
+
+Prefijo al nombre para aque no haya comflicto entre nombres
+Ej: (http://miWeb.com.)datos
+
+XMLS:PREFIJO="URI"
+
+Los prefijos deben ser diferentes
+
+Es posible crear espacios de nombres por defecto tecleandolo en el elemento raíz
+	Para crear una excepción se escribe el atributo xmlns dándole valor nulo(="")
+
+Espacios en blanco
+
+xml:space
+	preserve: El archivo xml almacena los espacios o tabuladores
+
+xml schema (ó DTD)
+Se enfrenta el documento xml al DTD para validarlo
+
+Cardinalidad de los elementos:
+	? 0-1
+	* 0-n
+	+ 1-n
+Los hijos de los elementos se escriben entre paréntesis Ej: <!ELEMENT personas (nombre)>
+Elementos operacionales:
+	|-> XOR: Tipo enumerado
+		tabla verdad
+		a b or exclusivo
+		1 1 0
+		1 0 1
+		0 1 1
+		0 0 0
+	| *-> 0-n
+		Ej: <ELEMENT articulos (codigo | id)*> <!--El asterisco afecta a los elementos dentro del paréntesis-->
+		<!ELEMENT codigo (#PCDATA)
+		<!ELEMENT id (#PCDATA)>	
+	| concatenado->
+	| con #PCDATA-> Se puede combinar
+	(guarismo: Representación de una idea Ej: el '5' y la 'V' representan la idea de cinco)
+
+	Declaración de atributos
+	<ATTLIST nombre_del_atribulto nombre_del_atributo tipo_de_atributo valor_del_atributo -> Atribute list,es decir, lista de atributos. Ej: <ATTLIST f1 pais CDATA "ESPAÑA"-> <!--Valor por omisión "España"-->
+		#IMPLIED -> Opcional
+		#REQUIRED -> Obligatorio
+		#FIXED -> Es constante. Se escribe entre comillas simples o dobles
+		Notation -> Notacion para declarar un atributo más adelante
+
+	Atributos más importantes
+		-CDATA: Campo que acepta caracteres
+		-Enumerados: Campo que no acepta un valor específico. Ej. Una empresa tiene sedes en Asia, Europa y América pero no en Oceanía ni África
+		-ID: Identificar de forma específica
+		-IDREF:Referencia al ID
+		-NMTOKEN: Campo que acepta ':', '_','-', '. además de los caracteres'
+
+	Tipos de entidad
+		-Entity: Entidad simple
+		-Entities: Entidad compuesta
+

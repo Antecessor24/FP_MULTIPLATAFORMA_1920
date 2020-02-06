@@ -1,0 +1,40 @@
+<!DOCTYPE>
+<html lang="es">
+  <head>
+      <title>Formulario 2</title>
+        <meta charset="utf-8"/>
+        <meta charset="form"/>
+  </head>
+  <body>
+      <form id="Form" action="#" method="post" enctype="multipart/form-data" > <!--El Encryptype es el utilizado para el input files -->
+        <label for="files">Introduzca un archivo</label>
+        <input type="file" id="files" multiple accept=".png,.pdf,.png"/> <br/>
+        <label><input type="checkbox" id="videojuegos"/>videojuegos</label>
+        <label><input type="checkbox" id="libros"/>libros</label>
+        <label><input type="checkbox" id="juguetes"/>juguetes</label> <br/>
+        <label><input type="radio" id="Call of Duty" value="videojuegos" name="videojuegos"/>Call of Duty</label>
+        <label><input type="radio" id="Minecraft" value="videojuegos" name="videojuegos"/>Minecraft </label>
+        <label><input type="radio" id="Monument Valley" value="videojuegos" name="videojuegos"/>Monument Valley</label> <!--Selección única-->
+        <label id="hidden"></label>
+        <input id="hidden" type="hidden" value="Antifishing"></input> <br/><!--Input que el usuario no ve-->
+        <textarea id="obsevación" cols="80" rows="30" resize="none"></textarea>
+        <select id="menu" size="5">
+          <optgroup label="Ordenadores">
+            <option value="o1">Ordenador</option>
+            <option value="o2">Ordenador2</option>
+          </optgroup>
+          <optgroup label="Impresoras">
+            <option value="i1">Impresora</option>
+            <option value="i2">Impresora2</option>
+          </optgroup>
+          <optgroup label="Ratones">
+            <option value="r1">Ratón</option>
+          </optgroup>
+        </select>
+        Tu usuario:<input type="text" placeholder="Introduzca su usuario: Una letra dos números y una @" autofocus pattern="^[a-z]\d{2}@$" required/>
+        <input type="Submit" value="Enviar"/> <!-- Input que envía la información rellenada en el formulario-->
+        <input type="Reset" value="Borrar"/>  <!-- Input que resetea el formulario-->
+
+      </form>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+/*Visualiza las etiquetas de html como cajas*/
+body
+{
+  background-image: sobres.png;
+}
+p
+{
+/*obliquo es más cursivo que en cursiva*/
+  font-style:oblique;
+  font-family:timesNewRomans;
+  fext-decoration:overline;
+/*la última linea de código del bloque no necesita un ";"*/
+  fext-align:right
+}
+h1,#y
+{
+  font-style:style:italic;
+  font-family:timesNewRoman;
+/*subralla el texto de h1 y la p con id*/
+  text-decoration:underline;
+}
+.texto
+{
+/*Sangra/tabula el la etiqueta p*/
+  text-indent:100px;
+  text-decoration:none;
+/* Cambia a mayúscula la primera letra de cada palabra del párrafo*/
+  text-transform:capitalize;
+}

@@ -1,0 +1,11 @@
+﻿<!ELEMENT libreria (libreria+)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT tema (#PCDATA+)>
+<!ELEMENT autor (#PCDATA) *>
+<!ATTLIST libreria ciudadLib CDATA "Sevilla" & ciudadLib>
+<!ATTLIST codigo ID #REQUIRED ciudad CDATA>
+<!ATTLIST grande (MUY_GRANDE| GRANDE | PEQUEÑA) #REQUIRED CDATA>
+<!ENTITY ciudadLib "Sevilla" &ciudadLib;>
+
+

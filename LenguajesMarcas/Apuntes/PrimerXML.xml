@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE animales SYSTEM "PrimerDTD,dtd">
+<animales>
+  <animal codigo="a1">
+    <nombre>vulpes vulpes- zorro</nombre>  
+    <dieta>Carnívoro</dieta>
+    <habitat>Bosque</habitat>
+  </animal>
+<!--  
+  <![CDATA[JFJFJFJJFJFJFJFJFJFJFJFJFJFJFJJFJFJFJF]]> -->
+  <animal codigo="a2">
+    <nombre>Panthera- león </nombre>
+    <dieta>Carnívoro</dieta>
+    <habitat>Sabana</habitat>
+  </animal>
+    <animal codigo="a3">
+    <nombre>Panthera Tigris- tigre</nombre>
+    <dieta>Carnívoro</dieta>
+    <habitat>Jungla</habitat>
+  </animal>
+</animales>
