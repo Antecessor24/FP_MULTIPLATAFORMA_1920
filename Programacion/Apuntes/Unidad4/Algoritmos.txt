@@ -1,0 +1,12 @@
+-Busqueda binaria		Tres iteraciones
+Accedemos al valor
+Comprueba que es menor siempre
+Cogemos lo que está en el centro
+
+PICTURE
+
+-Quicksort (Ordenación rápida)
+
+
+
+

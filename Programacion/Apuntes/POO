@@ -1,0 +1,54 @@
+POO
+Encapsulación 
+Herencia* SI UN LENGUAJE NO TIENE IMPLEMENTADO EL MECANISMO HERENCIA NO ES UN LENGUAJE ORIENTADO A OBJETOS
+Polimorfismo
+
+El main pide datos y revibe de las clases
+
+	Abstración: Ganeralizar un objeto del mundo real
+	Encapsulación: Ocultación de información //Solo saber la función no el funcionamiento
+	Modularidad: 
+
+	CLASES [] (plantilla)
+			|	Atributos
+			|	Métodos
+instancias	|
+			|
+			v
+			Objetos(Identidad(diferente dirección de memoria) Estados,comportamientos, constructores{mismo nombre que la clase})1,02,ON
+			(plantilla rellena)
+
+Jerarquía (Herencia)
+agragación: herencia multiple la clase A y la clase B heredan de la clase N
+Generalización: Herencia simple
+Constructores
+	int a1,a2;
+	Por defecto
+
+
+	Por referencia 
+	Ejemplo(int a1, int a2)
+	{
+	this.a1=a1; //Con THIS NO se utiliza "_"
+	}
+
+	Por copia {Mismo estado distinta memoria}
+	Ejemplo(Ejemplo o1)
+	{
+	this.a1=o1,a1;
+	this.a2=o1.a2;
+	}
+
+Interacción entre objetos
+	Mensaje: Acción que realiza un objeto o comunicación entre objetos
+Herencia
+	comunicación entre padre e hijo extends
+
+referencia null
+	Si un objeto no tiene referencia de memoria su referencia vale null
+
+	if(p==null) Dos atributos referenciados COMPARAN SU DIRECCIÓN DE MEMORIA
+
+JOPTINONPANE
+	importar libreria swing
+	Siempre con STRING conversión Ej.doubleValueOf
