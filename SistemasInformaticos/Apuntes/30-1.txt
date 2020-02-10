@@ -1,0 +1,20 @@
+Adyacente	
+	Espacios en blanco -> Franmentación
+Lista ligada
+	Cada bloque contine la dirección del siguiente bloque, excepto el último bloque del fichero que contiene un NULL
+	FAT
+Bloque indirecto
+	Lo utiliza Linux
+	Se asocia a cada archivo una tabla, inodo que contiene atributos y direcciones de bloques
+
+tipos de sistema de archivos
+		FAT 16
+		FAT 32
+		NTFS
+		EXT(linus)
+		tamaño de asignación
+		unidades de asignacación
+		tamaño máximo
+		Dominio
+
+
