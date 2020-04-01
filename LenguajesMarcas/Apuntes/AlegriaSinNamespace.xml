@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--En líneas 4: Espacio de nombres con prefijo xsi para indicar que este xml es uns instancia (lo equivalente a un objeto de una clase) de un xml-schema (xsd).
+xsi:nomNamespaceSchemaLocation para indicar dónde se encuentra el esquema y comunicarle que no se usa espacio de nombres en el xml. No se pone el atributo targetNamespace en xsd -->
+<Alegría xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="AlegriaSinNamespace.xsd">
+  <Teatro nombre="Alegría Delfín" aforo="150" idTeatro="T001"> <!--Elemento raíz sin namespace. El atributo idTeatro será de tipo xs:ID en el xsd-->
+    <NumButacasPatio>145</NumButacasPatio>
+    <NumButacasPalco>5</NumButacasPalco>
+    <NumPalcos>2</NumPalcos>
+    <País>España</País>
+    <FechaConstrucción>1970-03-01</FechaConstrucción>
+    <NumRepresentaciones>56987</NumRepresentaciones>
+    <DuraciónObraActual>P1Y2M5D</DuraciónObraActual> <!--DuraciónObraActual es de tipo xs:duration en el xsd por ello se especifica P de período 1Y(1 año) 2M(2 meses) 5D(5 días) -->
+    <Propiedad>Pública</Propiedad>
+    <PáginaWEB>http://www.alegriadelfin.org</PáginaWEB> <!--Este elemento tiene tipo anyURI en xsd-->
+    <PrecioMedio>62.45</PrecioMedio> <!--Este elemento es de tipo xs:decimal pero está restringido a tener 8 dígitos en total , 2 de los cuales son decimales-->
+    <AcondicionadoMinusválidos>true</AcondicionadoMinusválidos> <!--Los elementos de líneas 18 y 19 son boolean-->
+    <EntraNumerada>false</EntraNumerada> 
+    <Subvención>0</Subvención> <!--Este elemento, Subvención, no es obligatorio, tal y como se observa en el siguiente Teatro: Alegría Ballena. Si existe tiene las mismas restricciones que PrecioMedio-->
+  </Teatro>
+  
+  <Teatro nombre="Alegría Ballena" aforo="550" idTeatro="T002">
+    <NumButacasPatio>540</NumButacasPatio>
+    <NumButacasPalco>10</NumButacasPalco>
+    <NumPalcos>5</NumPalcos>
+    <País>Portugal</País>
+    <FechaConstrucción>1990-01-31</FechaConstrucción>
+    <NumRepresentaciones>30004</NumRepresentaciones>
+    <DuraciónObraActual>P3Y0M20D</DuraciónObraActual>
+    <Propiedad>Pública</Propiedad>
+    <PáginaWEB>http://www.alegriaballena.org</PáginaWEB>
+    <PrecioMedio>54.15</PrecioMedio>
+    <AcondicionadoMinusválidos>true</AcondicionadoMinusválidos>
+    <EntraNumerada>true</EntraNumerada>
+  </Teatro>
+  
+  <Teatro nombre="Alegría Moule" aforo="75" idTeatro="T003">
+    <NumButacasPatio>71</NumButacasPatio>
+    <NumButacasPalco>4</NumButacasPalco>
+    <NumPalcos>1</NumPalcos>
+    <País>Francia</País>
+    <FechaConstrucción>1957-07-14</FechaConstrucción>
+    <NumRepresentaciones>90212</NumRepresentaciones>
+    <DuraciónObraActual>P0Y4M25D</DuraciónObraActual>
+    <Propiedad>Privada</Propiedad>
+    <PáginaWEB>http://www.alegriamoule.org</PáginaWEB>
+    <PrecioMedio>82.23</PrecioMedio>
+    <AcondicionadoMinusválidos>false</AcondicionadoMinusválidos>
+    <EntraNumerada>true</EntraNumerada>
+    <Subvención>10000.00</Subvención>
+  </Teatro>
+  
+  <Trabajadores>
+  
+    <Trabajador idTrabajador="L001" idTeatroTrabajo="T003"> <!--El atributo idTrabajador es de tipo xs:ID y el atributo idTeatroTrabajo es de tipo xs:IDREF es por ello que coincide con un idTeatro previo-->
+      <Nombre>Laurent</Nombre>
+      <Apellido>Marceaux</Apellido>
+      <Labor>Limpieza</Labor>
+      <Sueldo>1567.89</Sueldo> <!--Este elemento es de tipo xs:decimal pero está restringido a tener 8 dígitos en total , 2 de los cuales son decimales-->
+    </Trabajador>
+    
+     <Trabajador idTrabajador="L002" idTeatroTrabajo="T003">
+      <Nombre>Marçel</Nombre>
+      <Apellido>Pitou</Apellido>
+      <Labor>Director</Labor>
+      <Sueldo>6567.12</Sueldo>
+    </Trabajador>
+    
+     <Trabajador idTrabajador="L003" idTeatroTrabajo="T001">
+      <Nombre>Antonia</Nombre>
+      <Apellido>Cifuentes</Apellido>
+      <Labor>Director</Labor>
+      <Sueldo>5567.89</Sueldo>
+    </Trabajador>
+    
+     <Trabajador idTrabajador="L004" idTeatroTrabajo="T001">
+      <Nombre>Mario</Nombre>
+      <Apellido>Vázquez</Apellido>
+      <Labor>Taquilla</Labor>
+      <Sueldo>1100.15</Sueldo>
+    </Trabajador>
+    
+     <Trabajador idTrabajador="L005" idTeatroTrabajo="T002">
+      <Nombre>Joao</Nombre>
+      <Apellido>Da Silva</Apellido>
+      <Labor>Actor</Labor>
+      <Sueldo>2567.89</Sueldo>
+    </Trabajador>
+    
+    <Trabajador idTrabajador="L006" idTeatroTrabajo="T002">
+      <Nombre>Olegario</Nombre>
+      <Apellido>Dos Santos</Apellido>
+      <Labor>Limpieza</Labor>
+      <Sueldo>1567.89</Sueldo>
+    </Trabajador>
+    
+  </Trabajadores>
+  
+</Alegría> 

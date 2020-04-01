@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--En líneas 5 y 6: espacio de nombres con prefijo ts para los elementos de este xml. Espacio de nombres con prefijo xsi para indicar que este xml es uns instancia (lo equivalente a un objeto de una
+clase) de un xml-schema (xsd). xsi:schemaLocation coun una URL y un nombre de fichero xsd, separados por un espacio para indicar dónde se encuentra el esquema e indicarle el espacio de nombres
+que se pondrá en el atributo targetNamespace del xsd -->
+<ts:Alegría xmlns:ts="http://www.teatrosdelaalegria.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.teatrosdelaalegria.org AlegriaConNamespace.xsd">
+  <ts:Teatro nombre="Alegría Delfín" aforo="150" idTeatro="T001"> <!--Elemento raíz ts:Teatro con su prefijo del namespace. El atributo idTeatro será de tipo xs:ID en el xsd-->
+    <ts:NumButacasPatio>145</ts:NumButacasPatio>
+    <ts:NumButacasPalco>5</ts:NumButacasPalco>
+    <ts:NumPalcos>2</ts:NumPalcos>
+    <ts:País>España</ts:País>
+    <ts:FechaConstrucción>1970-03-01</ts:FechaConstrucción>
+    <ts:NumRepresentaciones>56987</ts:NumRepresentaciones>
+    <ts:DuraciónObraActual>P1Y2M5D</ts:DuraciónObraActual> <!--ts:DuraciónObraActual es de tipo xs:duration en el xsd por ello se especifica P de período 1Y(1 año) 2M(2 meses) 5D(5 días) -->
+    <ts:Propiedad>Pública</ts:Propiedad>
+    <ts:PáginaWEB>http://www.alegriadelfin.org</ts:PáginaWEB> <!--Este elemento tiene tipo anyURI en xsd-->
+    <ts:PrecioMedio>62.45</ts:PrecioMedio> <!--Este elemento es de tipo xs:decimal pero está restringido a tener 8 dígitos en total , 2 de los cuales son decimales-->
+    <ts:AcondicionadoMinusválidos>true</ts:AcondicionadoMinusválidos> <!--Los elementos de líneas 18 y 19 son boolean-->
+    <ts:EntraNumerada>false</ts:EntraNumerada> 
+    <ts:Subvención>0</ts:Subvención> <!--Este elemento, ts:Subvención, no es obligatorio, tal y como se observa en el siguiente Teatro: Alegría Ballena. Si existe tiene las mismas restricciones que PrecioMedio-->
+  </ts:Teatro>
+  
+  <ts:Teatro nombre="Alegría Ballena" aforo="550" idTeatro="T002">
+    <ts:NumButacasPatio>540</ts:NumButacasPatio>
+    <ts:NumButacasPalco>10</ts:NumButacasPalco>
+    <ts:NumPalcos>5</ts:NumPalcos>
+    <ts:País>Portugal</ts:País>
+    <ts:FechaConstrucción>1990-01-31</ts:FechaConstrucción>
+    <ts:NumRepresentaciones>30004</ts:NumRepresentaciones>
+    <ts:DuraciónObraActual>P3Y0M20D</ts:DuraciónObraActual>
+    <ts:Propiedad>Pública</ts:Propiedad>
+    <ts:PáginaWEB>http://www.alegriaballena.org</ts:PáginaWEB>
+    <ts:PrecioMedio>54.15</ts:PrecioMedio>
+    <ts:AcondicionadoMinusválidos>true</ts:AcondicionadoMinusválidos>
+    <ts:EntraNumerada>true</ts:EntraNumerada>
+  </ts:Teatro>
+  
+  <ts:Teatro nombre="Alegría Moule" aforo="75" idTeatro="T003">
+    <ts:NumButacasPatio>71</ts:NumButacasPatio>
+    <ts:NumButacasPalco>4</ts:NumButacasPalco>
+    <ts:NumPalcos>1</ts:NumPalcos>
+    <ts:País>Francia</ts:País>
+    <ts:FechaConstrucción>1957-07-14</ts:FechaConstrucción>
+    <ts:NumRepresentaciones>90212</ts:NumRepresentaciones>
+    <ts:DuraciónObraActual>P0Y4M25D</ts:DuraciónObraActual>
+    <ts:Propiedad>Privada</ts:Propiedad>
+    <ts:PáginaWEB>http://www.alegriamoule.org</ts:PáginaWEB>
+    <ts:PrecioMedio>82.23</ts:PrecioMedio>
+    <ts:AcondicionadoMinusválidos>false</ts:AcondicionadoMinusválidos>
+    <ts:EntraNumerada>true</ts:EntraNumerada>
+    <ts:Subvención>10000.00</ts:Subvención>
+  </ts:Teatro>
+  
+  <ts:Trabajadores>
+  
+    <ts:Trabajador idTrabajador="L001" idTeatroTrabajo="T003"> <!--El atributo idTrabajador es de tipo xs:ID y el atributo idTeatroTrabajo es de tipo xs:IDREF es por ello que coincide con un idTeatro previo-->
+      <ts:Nombre>Laurent</ts:Nombre>
+      <ts:Apellido>Marceaux</ts:Apellido>
+      <ts:Labor>Limpieza</ts:Labor>
+      <ts:Sueldo>1567.89</ts:Sueldo> <!--Este elemento es de tipo xs:decimal pero está restringido a tener 8 dígitos en total , 2 de los cuales son decimales-->
+    </ts:Trabajador>
+    
+     <ts:Trabajador idTrabajador="L002" idTeatroTrabajo="T003">
+      <ts:Nombre>Marçel</ts:Nombre>
+      <ts:Apellido>Pitou</ts:Apellido>
+      <ts:Labor>Director</ts:Labor>
+      <ts:Sueldo>6567.12</ts:Sueldo>
+    </ts:Trabajador>
+    
+     <ts:Trabajador idTrabajador="L003" idTeatroTrabajo="T001">
+      <ts:Nombre>Antonia</ts:Nombre>
+      <ts:Apellido>Cifuentes</ts:Apellido>
+      <ts:Labor>Director</ts:Labor>
+      <ts:Sueldo>5567.89</ts:Sueldo>
+    </ts:Trabajador>
+    
+     <ts:Trabajador idTrabajador="L004" idTeatroTrabajo="T001">
+      <ts:Nombre>Mario</ts:Nombre>
+      <ts:Apellido>Vázquez</ts:Apellido>
+      <ts:Labor>Taquilla</ts:Labor>
+      <ts:Sueldo>1100.15</ts:Sueldo>
+    </ts:Trabajador>
+    
+     <ts:Trabajador idTrabajador="L005" idTeatroTrabajo="T002">
+      <ts:Nombre>Joao</ts:Nombre>
+      <ts:Apellido>Da Silva</ts:Apellido>
+      <ts:Labor>Actor</ts:Labor>
+      <ts:Sueldo>2567.89</ts:Sueldo>
+    </ts:Trabajador>
+    
+    <ts:Trabajador idTrabajador="L006" idTeatroTrabajo="T002">
+      <ts:Nombre>Olegario</ts:Nombre>
+      <ts:Apellido>Dos Santos</ts:Apellido>
+      <ts:Labor>Limpieza</ts:Labor>
+      <ts:Sueldo>1567.89</ts:Sueldo>
+    </ts:Trabajador>
+    
+  </ts:Trabajadores>
+  
+</ts:Alegría> 
